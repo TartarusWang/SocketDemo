@@ -6,15 +6,15 @@ using System.Text;
 namespace SocketServer
 {
     using System.Net;
+    using System.Net.Sockets;
 
     class Program
     {
         static void Main(string[] args)
         {
-            var server=new Server(10,1024);
-            server.Init();
-            server.Start(new IPEndPoint(IPAddress.Any, 7075));
-            Console.ReadLine();
+            Server server = new Server();
+            server.Listen(new IPEndPoint(IPAddress.Any, 7075));
         }
+
     }
 }
