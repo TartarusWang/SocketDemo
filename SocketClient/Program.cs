@@ -16,8 +16,8 @@ namespace SocketClient
         {
            
             var client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            client.Connect(IPAddress.Parse("127.0.0.1"), 7075);
-            //client.Connect(IPAddress.Parse("183.136.162.82"), 7075);
+            //client.Connect(IPAddress.Parse("127.0.0.1"), 7075);
+            client.Connect(IPAddress.Parse("183.136.162.82"), 7075);
             //uint dummy = 0;
             //var inOptionValues = new byte[Marshal.SizeOf(dummy) * 3];
             //BitConverter.GetBytes((uint)1).CopyTo(inOptionValues, 0);
